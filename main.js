@@ -152,3 +152,99 @@
 
 
 
+// 8. Loop day input like this: 
+// «Day of the week. Would you like to see the next one?» which continues as long as the user clicks OK.
+
+// let day =1;
+// let answer;
+
+// do {
+//     switch(day)
+//     {
+//         case 1:
+//             console.log("Monday");
+//             break;
+//         case 2:
+//             console.log("Tuesday");
+//             break;
+//         case 3:
+//             console.log("Wednesday");
+//             break;
+//         case 4:
+//             console.log("Thursday");
+//             break;
+//         case 5:
+//             console.log("Friday");
+//             break;
+//         case 6:
+//             console.log("Saturday");
+//             break;
+//         case 7:
+//             console.log("Sunday");
+//             break;
+//     }
+
+//     answer = prompt("Would you like to see the next one? (yes/no)");
+
+//     day ++;
+
+//     if(day>7)
+//     {
+//         day=1;
+//     }
+// } while(answer === "yes");
+
+
+
+// 9. Display the multiplication table of all numbers from 2 to 9. Every number has to be multiplied by 1 to 10. 
+// for(let i=2; i<=9; i++)
+// {
+//     console.log("Multiplication table for: "+ i+ ":");
+//     for(let j=1; j<=10; j++)
+//     {
+//         console.log(i + " x "+ j + "=" + (i*j));
+//     }
+// }
+
+
+// 10. “Guess the number” game. Suggest a user to think of a number from 0 to 100 and guess it in the following way: 
+// every loop iteration needs to divide the range of numbers in half, you represent the result as N and ask the user
+//  “Your number > N, < N or == N?” Depending on what the user said, narrow down the range. So the starting range 
+// is 0 to 100, divided in half is 50. If the user said the number is > 50, the next range is 51 to 100, and so on, 
+// until the user chooses == N. 
+
+// let low = 0;
+// let high = 100;
+
+// while(true)
+// {
+//     let sum = low + high;
+//     let mid;
+//     if( sum % 2 === 0)
+//     {
+//         mid = sum/2;
+//     }
+//     else{
+//         mid = (sum -1 )/2;
+//     }
+
+//     let answer =  prompt( " Your number >"+ mid + ", <" + mid + "or == " + mid + "?");
+//     if(answer === "==")
+//     {
+//         console.log("Your number is: " + mid);
+//         break;
+        
+//     }
+//     else if(answer === ">")
+//     {
+//         low=mid +1;
+//     }
+//     else if (answer === "<")
+//     {
+//         high=mid-1;
+//     }
+//     else
+//     {
+//           console.log("Please type only: >  ,  <  ,  ==");
+//     }
+// }
