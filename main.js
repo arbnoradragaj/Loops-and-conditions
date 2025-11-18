@@ -151,33 +151,33 @@
 // Move the digits and display the result (if the number 123456 needs to be moved by 2 digits, the result will be 345612)
 
 
-let number= Number(prompt("Enter number"));
-let shift = Number(prompt("How many digits to move?"));
+// let number= Number(prompt("Enter number"));
+// let shift = Number(prompt("How many digits to move?"));
 
-let temp = number;
-let length =0;
+// let temp = number;
+// let length =0;
 
-while(temp>0)
-{
-    temp= (temp -(temp %10))/10;
-    length++;
-}
+// while(temp>0)
+// {
+//     temp= (temp -(temp %10))/10;
+//     length++;
+// }
 
-for(let i=0; i< shift; i++)
-{
-    let pow=1;
-    for (let p=1; p<length; p++)
-    {
-        pow=pow*10;
-    }
+// for(let i=0; i< shift; i++)
+// {
+//     let pow=1;
+//     for (let p=1; p<length; p++)
+//     {
+//         pow=pow*10;
+//     }
 
-    let firstDigit= (number-(number %pow))/pow;
-    let rest = number%pow;
+//     let firstDigit= (number-(number %pow))/pow;
+//     let rest = number%pow;
 
-    number = rest*10 + firstDigit;
-}
+//     number = rest*10 + firstDigit;
+// }
 
-console.log(number);
+// console.log(number);
 
 
 // 8. Loop day input like this: 
@@ -225,15 +225,14 @@ console.log(number);
 
 
 // 9. Display the multiplication table of all numbers from 2 to 9. Every number has to be multiplied by 1 to 10. 
-// for(let i=2; i<=9; i++)
-// {
-//     console.log("Multiplication table for: "+ i+ ":");
-//     for(let j=1; j<=10; j++)
-//     {
-//         console.log(i + " x "+ j + "=" + (i*j));
-//     }
-// }
-
+for(let i=2; i<=9; i++)
+{
+    console.log("Multiplication table for: "+ i+ ":");
+    for(let j=1; j<=10; j++)
+    {
+        console.log(i + " x "+ j + "=" + (i*j));
+    }
+}
 
 // 10. “Guess the number” game. Suggest a user to think of a number from 0 to 100 and guess it in the following way: 
 // every loop iteration needs to divide the range of numbers in half, you represent the result as N and ask the user
