@@ -60,7 +60,7 @@
 //     }
 // }
 
-// console.log(`There are ${count} digits `)
+// console.log(`There are ${count} digits `);
 
 
 // 5. Request 10 numbers from a user and count, how many are positive, negative, or zero. 
@@ -150,6 +150,34 @@
 // 7. Request a number from a user and ask by how many digits to move it. 
 // Move the digits and display the result (if the number 123456 needs to be moved by 2 digits, the result will be 345612)
 
+
+let number= Number(prompt("Enter number"));
+let shift = Number(prompt("How many digits to move?"));
+
+let temp = number;
+let length =0;
+
+while(temp>0)
+{
+    temp= (temp -(temp %10))/10;
+    length++;
+}
+
+for(let i=0; i< shift; i++)
+{
+    let pow=1;
+    for (let p=1; p<length; p++)
+    {
+        pow=pow*10;
+    }
+
+    let firstDigit= (number-(number %pow))/pow;
+    let rest = number%pow;
+
+    number = rest*10 + firstDigit;
+}
+
+console.log(number);
 
 
 // 8. Loop day input like this: 
